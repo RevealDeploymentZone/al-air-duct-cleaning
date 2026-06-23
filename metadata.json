@@ -1,0 +1,10 @@
+{
+  "name": "AL Air Duct Cleaning Services",
+  "description": "Premium SEO, AEO, and GEO optimized web workspace for AL Air Duct Cleaning, featuring comprehensive residential, commercial, post-construction duct services, and localized indoor air quality indicators.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
