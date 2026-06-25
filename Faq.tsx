@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { HelpCircle, ChevronDown, ChevronUp, ShieldQuestion, ArrowRight } from 'lucide-react';
-import { FAQItem } from '../types';
+import { FAQItem } from './types';
 
 export default function Faq() {
   const [openId, setOpenId] = useState<string>('faq-1');
