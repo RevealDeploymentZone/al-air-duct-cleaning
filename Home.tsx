@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { statesData } from '../data/cities';
-import BeforeAfterSlider from '../components/BeforeAfterSlider';
-import BookingForm from '../components/BookingForm';
+import { statesData } from './cities';
+import BeforeAfterSlider from './BeforeAfterSlider';
+import BookingForm from './BookingForm';
 import { Shield, Sparkles, Award, Star, ArrowRight, Fan, CheckCircle, Flame, Heart } from 'lucide-react';
 
 interface HomeProps {
