@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { statesData } from '../data/cities';
+import { statesData } from './cities';
 import { Menu, X, Phone, Search, ChevronDown, Award } from 'lucide-react';
 import Logo from './Logo';
 
