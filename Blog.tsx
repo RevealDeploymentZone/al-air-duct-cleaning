@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { blogPosts } from '../data/blog';
-import { BlogPost } from '../types';
+import { blogPosts } from './blog';
+import { BlogPost } from './types';
 import { Search, Calendar, User, Clock, ArrowLeft, BookOpen, Facebook, Twitter, Link } from 'lucide-react';
 
 interface BlogProps {
