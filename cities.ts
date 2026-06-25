@@ -176,7 +176,7 @@ export const statesData: StateData[] = [
       {
         slug: 'nashville',
         name: 'Nashville',
-        phone: '(615) 700-6152',
+        phone: '(615) 205-3379',
         epaStat: 'The EPA highlights Tennessee as a primary allergen zone. Humid air captures cedar chest residues and local dander, baking them into warm internal duct liners.',
         healthTrigger: 'Severe spring tree pollen, mountain cedar sweeps, and humid summer stagnation locking in urban particulate.',
         serviceRadius: '25-mile radius covering Nashville, Franklin, Brentwood, Hendersonville, and Murfreesboro.',
@@ -404,7 +404,7 @@ export const statesData: StateData[] = [
       {
         slug: 'salt-lake-city',
         name: 'Salt Lake City',
-        phone: '(801) 500-8012',
+        phone: '(385) 462-1032',
         epaStat: 'The SLC inversion traps particulate pollution in the valley. This pollution is pulled into residential heating and cooling systems, concentrating pollutants indoors as per EPA audits.',
         healthTrigger: 'Winter inversion soot, fine salt dust from the basin, and mountain cottonweed pollen.',
         serviceRadius: '25-mile radius covering Salt Lake City, Sandy, Provo, West Valley City, and Park City.',
@@ -422,7 +422,7 @@ export const statesData: StateData[] = [
       {
         slug: 'atlanta',
         name: 'Atlanta',
-        phone: '(404) 900-4042',
+        phone: '(404) 948-4544',
         epaStat: 'EPA data catalogs Atlanta as a major hotspot for biological air deposits. High canopy cover combines with excessive warmth to breed spores in attic ducts.',
         healthTrigger: 'Catastrophic spring pine pollen sweeps, high humidity mold spikes, and urban highway particulate.',
         serviceRadius: '25-mile radius covering Atlanta Metro, Marietta, Alpharetta, Decatur, Sandy Springs, and Roswell.',
@@ -476,7 +476,7 @@ export const statesData: StateData[] = [
       {
         slug: 'saint-louis',
         name: 'Saint Louis',
-        phone: '(314) 200-3142',
+        phone: '(314) 584-7476',
         epaStat: 'Mississippi Valley humectants promote indoor allergen development. Older brick homes with duct modifications require regular debris removal to prevent structural dust settling.',
         healthTrigger: 'River humidity dampness, sycamore tree spores, and localized urban soot blankets.',
         serviceRadius: '25-mile radius covering St. Louis, Clayton, Kirkwood, Webster Groves, and Chesterfield.',
@@ -494,7 +494,7 @@ export const statesData: StateData[] = [
       {
         slug: 'phoenix',
         name: 'Phoenix',
-        phone: '(602) 800-6022',
+        phone: '(602) 584-2645',
         epaStat: 'With air conditioners running almost non-stop, desert dust particles pass through standard fiberglass filters. This coats critical HVAC mechanical units.',
         healthTrigger: 'Severe Haboob dust storms, high pollen from ash and olive trees, and fine desert dander.',
         serviceRadius: '25-mile radius covering Phoenix, Scottsdale, Mesa, Tempe, Chandler, and Glendale.',
