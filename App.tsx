@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { statesData } from './cities';
@@ -19,27 +20,14 @@ import CityPage from './CityPage';
 import { ArrowUp, Sparkles, Award, ShieldAlert } from 'lucide-react';
 
 export default function App() {
-  const [currentHash, setCurrentHash] = useState<string>('/home');
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  // Monitor URL hash for client-side routing
+  // Scroll to top on route change
   useEffect(() => {
-    const handleHashChange = () => {
-      let hash = window.location.hash.substring(1);
-      if (!hash || hash === '/') {
-        hash = '/home';
-        window.location.hash = '#/home';
-      }
-      setCurrentHash(hash);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    // Initialize
-    handleHashChange();
-
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
 
   // Monitor scroll for floating helper button
   useEffect(() => {
@@ -51,11 +39,11 @@ export default function App() {
   }, []);
 
   const handleNavigation = (pathStr: string) => {
-    window.location.hash = `#${pathStr}`;
+    navigate(pathStr);
   };
 
   // Determine if we are on a specific city page
-  const pathParts = currentHash.split('/').filter(Boolean);
+  const pathParts = location.pathname.split('/').filter(Boolean);
   let activeCityPhone: string | undefined = undefined;
 
   if (pathParts.length === 2) {
@@ -67,53 +55,28 @@ export default function App() {
     }
   }
 
-  const renderCurrentPage = () => {
-    if (pathParts.length === 2) {
-      const [stateSlug, citySlug] = pathParts;
-      return (
-        <CityPage 
-          stateSlug={stateSlug} 
-          citySlug={citySlug} 
-          onNavigate={handleNavigation} 
-        />
-      );
-    }
-
-    switch (currentHash) {
-      case '/home':
-        return <Home onNavigate={handleNavigation} />;
-      case '/why-choose-us':
-        return <WhyChooseUs onNavigate={handleNavigation} />;
-      case '/nadca-certified':
-        return <NadcaCertified onNavigate={handleNavigation} />;
-      case '/indoor-air-quality':
-        return <IndoorAirQuality />;
-      case '/commercial-duct-cleaning':
-        return <CommercialDuctCleaning onNavigate={handleNavigation} />;
-      case '/post-construction-cleaning':
-        return <PostConstructionCleaning onNavigate={handleNavigation} />;
-      case '/mold-remediation-ducts':
-        return <MoldRemediationDucts onNavigate={handleNavigation} />;
-      case '/service-area':
-        return <ServiceArea onNavigate={handleNavigation} />;
-      case '/faq':
-        return <Faq />;
-      case '/blog':
-        return <Blog onNavigate={handleNavigation} />;
-      default:
-        return <Home onNavigate={handleNavigation} />;
-    }
-  };
-
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col justify-between selection:bg-amber-600 selection:text-white overflow-x-hidden antialiased">
-      
+
       {/* Dynamic Navigation Header */}
-      <Navbar currentPath={currentHash} onNavigate={handleNavigation} activeCityPhone={activeCityPhone} />
+      <Navbar currentPath={location.pathname} onNavigate={handleNavigation} activeCityPhone={activeCityPhone} />
 
       {/* Primary Transition Screen Stage */}
       <main className="flex-grow pb-16">
-        {renderCurrentPage()}
+        <Routes>
+          <Route path="/" element={<Home onNavigate={handleNavigation} />} />
+          <Route path="/home" element={<Home onNavigate={handleNavigation} />} />
+          <Route path="/why-choose-us" element={<WhyChooseUs onNavigate={handleNavigation} />} />
+          <Route path="/nadca-certified" element={<NadcaCertified onNavigate={handleNavigation} />} />
+          <Route path="/indoor-air-quality" element={<IndoorAirQuality />} />
+          <Route path="/commercial-duct-cleaning" element={<CommercialDuctCleaning onNavigate={handleNavigation} />} />
+          <Route path="/post-construction-cleaning" element={<PostConstructionCleaning onNavigate={handleNavigation} />} />
+          <Route path="/mold-remediation-ducts" element={<MoldRemediationDucts onNavigate={handleNavigation} />} />
+          <Route path="/service-area" element={<ServiceArea onNavigate={handleNavigation} />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/blog" element={<Blog onNavigate={handleNavigation} />} />
+          <Route path="/:stateSlug/:citySlug" element={<CityPage onNavigate={handleNavigation} />} />
+        </Routes>
       </main>
 
       {/* Dynamic Footer Citation Block */}

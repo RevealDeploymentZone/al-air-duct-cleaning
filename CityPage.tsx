@@ -1,4 +1,5 @@
 import { useState, FormEvent } from 'react';
+import { useParams } from 'react-router-dom';
 import { statesData } from './cities';
 import BeforeAfterSlider from './BeforeAfterSlider';
 import SchemaMarkup from './SchemaMarkup';
@@ -49,12 +50,15 @@ const getCityAddress = (cityName: string, stateName: string, stateSlug: string, 
 };
 
 interface CityPageProps {
-  stateSlug: string;
-  citySlug: string;
   onNavigate: (path: string) => void;
 }
 
-export default function CityPage({ stateSlug, citySlug, onNavigate }: CityPageProps) {
+export default function CityPage({ onNavigate }: CityPageProps) {
+  const { stateSlug, citySlug } = useParams<{ stateSlug: string; citySlug: string }>();
+
+  if (!stateSlug || !citySlug) {
+    return <div>Invalid URL</div>;
+  }
   const [customerName, setCustomerName] = useState('');
   const [customerPhone, setCustomerPhone] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
