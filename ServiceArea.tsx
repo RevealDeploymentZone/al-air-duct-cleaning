@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { statesData } from '../data/cities';
+import { statesData } from './cities';
 import { MapPin, Phone, Search, Globe, ChevronRight } from 'lucide-react';
 
 interface ServiceAreaProps {
