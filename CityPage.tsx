@@ -1,7 +1,7 @@
 import { useState, FormEvent } from 'react';
-import { statesData } from '../data/cities';
-import BeforeAfterSlider from '../components/BeforeAfterSlider';
-import SchemaMarkup from '../components/SchemaMarkup';
+import { statesData } from './cities';
+import BeforeAfterSlider from './BeforeAfterSlider';
+import SchemaMarkup from './SchemaMarkup';
 import { Phone, Shield, Sparkles, Award, MapPin, CheckCircle, AlertTriangle, HelpCircle, Thermometer, Wind, Droplets } from 'lucide-react';
 
 const getCityAddress = (cityName: string, stateName: string, stateSlug: string, citySlug: string) => {
