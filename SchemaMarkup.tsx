@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { CityData, FAQItem } from '../types';
+import { CityData, FAQItem } from './types';
 
 interface SchemaMarkupProps {
   pageType: 'home' | 'city' | 'service' | 'faq' | 'blog' | 'why-choose-us' | 'nadca' | 'iaq';
