@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { statesData } from '../data/cities';
+import { statesData } from './cities';
 import { Calculator, CheckCircle2, PhoneCall, Calendar, ShieldCheck } from 'lucide-react';
 
 export default function BookingForm() {
