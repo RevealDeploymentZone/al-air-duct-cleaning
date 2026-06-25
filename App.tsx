@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import { statesData } from './data/cities';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import { statesData } from './cities';
 
 // Pages
-import Home from './pages/Home';
-import WhyChooseUs from './pages/WhyChooseUs';
-import NadcaCertified from './pages/NadcaCertified';
-import IndoorAirQuality from './pages/IndoorAirQuality';
-import CommercialDuctCleaning from './pages/CommercialDuctCleaning';
-import PostConstructionCleaning from './pages/PostConstructionCleaning';
-import MoldRemediationDucts from './pages/MoldRemediationDucts';
-import ServiceArea from './pages/ServiceArea';
-import Faq from './pages/Faq';
-import Blog from './pages/Blog';
-import CityPage from './pages/CityPage';
+import Home from './Home';
+import WhyChooseUs from './WhyChooseUs';
+import NadcaCertified from './NadcaCertified';
+import IndoorAirQuality from './IndoorAirQuality';
+import CommercialDuctCleaning from './CommercialDuctCleaning';
+import PostConstructionCleaning from './PostConstructionCleaning';
+import MoldRemediationDucts from './MoldRemediationDucts';
+import ServiceArea from './ServiceArea';
+import Faq from './Faq';
+import Blog from './Blog';
+import CityPage from './CityPage';
 
 import { ArrowUp, Sparkles, Award, ShieldAlert } from 'lucide-react';
 
