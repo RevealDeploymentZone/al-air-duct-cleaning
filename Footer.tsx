@@ -1,4 +1,4 @@
-import { statesData } from '../data/cities';
+import { statesData } from './cities';
 import { Award, ShieldAlert, Heart, Phone, MapPin, Building2, ArrowRight } from 'lucide-react';
 import Logo from './Logo';
 
